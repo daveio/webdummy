@@ -5,12 +5,9 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag web:latest
+      run: docker build . --file Dockerfile --tag webdummy:latest
     - name: Tag the Docker image with the short commit hash
       run: docker tag webdummy:latest docker.pkg.github.com/daveio/packages/webdummy:$(echo -n ${GITHUB_SHA} | cut -b -7)
     - name: Tag the Docker image with latest
