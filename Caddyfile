@@ -1,2 +1,5 @@
 :80
 tls off
+errors {
+  * 404.html
+}

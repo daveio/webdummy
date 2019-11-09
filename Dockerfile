@@ -12,8 +12,9 @@ RUN apk upgrade --update --no-cache && apk add --update --no-cache \
   tzdata
 COPY --from=caddybuilder /go/bin/parent /bin/parent
 COPY --from=caddybuilder /install/caddy /usr/bin/caddy
-COPY index.html /srv
 COPY Caddyfile /etc/Caddyfile
+COPY html /srv
+COPY html/404.html /srv/index.html
 WORKDIR /srv
 ENTRYPOINT ["/bin/parent", "caddy"]
 CMD ["--conf", "/etc/Caddyfile", "--log", "stdout", "--agree=true"]
