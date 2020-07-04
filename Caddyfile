@@ -1,5 +1,16 @@
-:80
-tls off
-errors {
-  * 404.html
+{
+	auto_https off
+	admin off
 }
+
+:80 {
+	file_server {
+		root /srv
+		index index.html
+	}
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
+
