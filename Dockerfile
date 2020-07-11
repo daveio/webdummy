@@ -4,5 +4,5 @@ COPY Caddyfile /etc/caddy/Caddyfile
 COPY html /srv
 COPY html/404.html /srv/index.html
 WORKDIR /srv
-EXPOSE 80
+EXPOSE 8000
 CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]

@@ -3,7 +3,7 @@
 	admin off
 }
 
-:80 {
+:8000 {
 	file_server {
 		root /srv
 		index index.html
