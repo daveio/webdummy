@@ -1,3 +1,4 @@
+LABEL org.opencontainers.image.source https://github.com/daveio/webdummy
 FROM caddy:2.1.1-alpine
 LABEL maintainer "Dave Williams <dave@dave.io>"
 COPY Caddyfile /etc/caddy/Caddyfile
