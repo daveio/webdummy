@@ -1,4 +1,3 @@
-# webdummy 
+# webdummy
 
 Dummy HTTP backend container
-
