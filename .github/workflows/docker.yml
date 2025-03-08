@@ -15,7 +15,7 @@ jobs:
       - name: Tag the Docker image with latest
         run: docker tag webdummy:latest ghcr.io/daveio/webdummy:latest
       - name: Log in to GHPR
-        run: echo ${GITHUB_TOKEN} | docker login docker.pkg.github.com --username daveio --password-stdin
+        run: echo ${GITHUB_TOKEN} | docker login ghcr.io --username daveio --password-stdin
       - name: Push to GHPR (short commit hash)
         run: docker push ghcr.io/daveio/webdummy:$(echo -n ${GITHUB_SHA} | cut -b -7)
       - name: Push to GHPR (latest)
