@@ -1,0 +1,13 @@
+{
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "${workspaceFolder}/.vscode/mise-tools/node"
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.vscode/mise-tools/python",
+  "go.goroot": "${workspaceFolder}/.vscode/mise-tools/goRoot",
+  "go.alternateTools": {
+    "go": "${workspaceFolder}/.vscode/mise-tools/go",
+    "dlv": "${workspaceFolder}/.vscode/mise-tools/dlv",
+    "gopls": "${workspaceFolder}/.vscode/mise-tools/gopls"
+  },
+  "workbench.colorCustomizations": {}
+}
