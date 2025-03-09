@@ -65,7 +65,7 @@ function generateColorSwatch(color) {
  * Generate Markdown content from the extracted color information
  */
 function generateMarkdown(colorInfo) {
-  let markdown = `# ${colorInfo.name} Theme Summary\n\n`;
+  let markdown = `# ${colorInfo.name} Summary\n\n`;
 
   // Add theme type
   markdown += `**Type:** ${colorInfo.type}\n\n`;
